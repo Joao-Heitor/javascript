@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nacionalidade</title>
+</head>
+<body>
+    <h1>Teste de condição</h1>
+    Seu país: <input type="text" name="txtvel" id="txtvel"> 
+    <input type="button" value="Checar" onclick="calcular()">
+    <div id="res">Sua nacionalidade: <span id="res-nac"></span> </div>
+
+    <!--colocando o span com um id... eu tiro o += e coloco apenas =
+             Alan Patos 2019: trocando apenas o valor que tem no span-->
+             
+    <script>
+        
+        function calcular(){
+            var txtv = document.querySelector("#txtvel")
+            var res = document.querySelector("#res-nac")
+            
+            if (txtv.value != "Brasil"){
+                res.innerHTML = "Você é estrangeiro"
+            }else{
+                res.innerHTML = "Você é brasileiro"
+            }
+        }
+    </script>
+</body>
+</html>
+
